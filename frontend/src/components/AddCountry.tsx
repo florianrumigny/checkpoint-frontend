@@ -1,5 +1,5 @@
 import { ADD_COUNTRY } from "@/graphql/mutations"
-import { GET_ALL_CONTINENTS } from "@/graphql/queries"
+import { GET_ALL_CONTINENTS, GET_ALL_COUNTRIES } from "@/graphql/queries"
 import { useToast } from "@/hooks/use-toast"
 import { useMutation, useQuery } from "@apollo/client"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -49,7 +49,8 @@ function AddCountry() {
                         emoji: values.emoji,
                         continent: { id: parseInt(values.continent) },
                     }
-                }
+                },
+                refetchQueries: [{ query: GET_ALL_COUNTRIES }]
             })
             form.reset()
             toast({

@@ -3,7 +3,7 @@ import List from "@/components/List";
 
 export function HomePage() {
   return (
-    <div className=" h-screen bg-gray-200">
+    <div className=" min-h-screen bg-gray-200 px-5">
       <AdCountry />
       <List />
     </div>
