@@ -1,3 +1,9 @@
+import List from "@/components/List";
+
 export function HomePage() {
-  return <p className=" text-red-700">You should start working here!</p>;
+  return (
+    <div className=" h-screen bg-gray-200">
+      <List />
+    </div>
+  );
 }
