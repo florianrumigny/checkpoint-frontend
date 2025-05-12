@@ -6,3 +6,8 @@ export interface Country {
   emoji: string;
   code: string;
 }
+
+export interface Continent {
+  id: string;
+  name: string;
+}

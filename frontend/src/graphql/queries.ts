@@ -25,3 +25,12 @@ export const GET_COUNTRY_BY_CODE = gql`
     }
   }
 `;
+
+export const GET_ALL_CONTINENTS = gql`
+  query Continents {
+    continents {
+      id
+      name
+    }
+  }
+`;
